@@ -17,7 +17,37 @@ fetch("https://x-colors.herokuapp.com/api/random/200")
         console.error("something went wrong" , err.message);
     });
 
-
+    async function getUsers() {
+        let url = 'https://randomuser.me/api/?results=5';
+        try {
+            let res = await fetch(url);
+            return await res.json();
+        } catch (error) {
+            console.log('my error is: ', error);
+        }
+    }
+    
+    async function renderUsers() {
+        const payload = await getUsers();
+        const users = payload.results;
+        let html = '';
+    
+        users.forEach(user => {
+            let htmlSegment = 
+                `<div class="user">
+                    <img class="user-img" src="${user.picture.thumbnail}" >
+                    <h2>${user.name.first} ${user.name.last}</h2>
+                    <p class="user-email"><a href="email:${user.email}">${user.email}</a></p>
+                </div>`;
+    
+            html += htmlSegment;
+        });
+    
+        let container = document.querySelector('.container');
+        container.innerHTML = html;
+    }
+    
+    renderUsers();
 
  // html elements added dynamically by JS
 fetch("houses.json")
