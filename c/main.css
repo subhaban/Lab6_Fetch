@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+dl {
+   
+    background-color:rgb(251, 214, 251) ;
+    margin-bottom:50px;
+     border:2px solid rgb(13, 13, 213);
+   
+}
+dl dt {
+    
+    background:#5e6aec;
+    color:#fff; 
+    font-weight:bold; 
+    margin:auto;
+    padding:5px;  
+    width:100px; 
+    border:5px solid rgb(11, 120, 51);
+   
+}
+dl dd {
+   
+    border:2px solid rgb(236, 79, 97);
+    margin:5px 5px; 
+    padding:5px 5px;
+}
