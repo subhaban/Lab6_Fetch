@@ -24,12 +24,12 @@ fetch("houses.json")
     .then((response) => response.json())
     .then((data) => {
         //create a temp holder to append all the html generated inside the forEach iterator
-        let html = "";
+        let html = " ";
         html +=`<dl class="datalist">`;
         //the argument "house" passed to the arrow function
         //holds each item in the array in turn.
         data.forEach((house) => {
-            let family = house.members.join(" | ");
+            let family = house.members.join(" , ");
             
             // generate the html snippet for one array item
             //to be added to the "html" temp holder.
@@ -37,10 +37,7 @@ fetch("houses.json")
             html += dt;
             let dd=`<dd class="membername">${family}</dd>`;
            html += dd;
-            
-           // let objInfo = `<p class="house">${house.name}</p>
-           // <p class="folks">${family}</p>`;
-            // html += objInfo;
+
             
         });
         html += `</dl>`;  
