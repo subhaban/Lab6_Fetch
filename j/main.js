@@ -6,6 +6,20 @@
 //it's easier to read if we put each step in its own line,
 //that's why the periods start the then lines.
 
+// fetch random color from free and open API of herokuapp.com
+
+fetch("https://x-colors.herokuapp.com/api/random/200")
+    .then(response => response.json())
+    .then (data =>{
+        document.body.style.backgroundColor = data.hex;
+    })
+    .catch(err =>{
+        console.error("something went wrong" , err.message);
+    });
+
+
+
+ // html elements added dynamically by JS
 fetch("houses.json")
     .then((response) => response.json())
     .then((data) => {
