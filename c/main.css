@@ -9,7 +9,7 @@ dl {
      border:2px solid rgb(13, 13, 213);
    
 }
-dl dt {
+.housename {
     
     background:#5e90ec;
     color:#fff; 
@@ -21,7 +21,7 @@ dl dt {
     text-align: center;
    
 }
-dl dd {
+ .membername{
    
     border:2px solid rgb(236, 79, 97);
     margin:15px;

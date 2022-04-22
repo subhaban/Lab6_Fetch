@@ -33,10 +33,10 @@ fetch("houses.json")
             
             // generate the html snippet for one array item
             //to be added to the "html" temp holder.
-           let dt =`<dt class="housename">${house.name}</dt>`;
-            html += dt;
-            let dd=`<dd class="membername">${family}</dd>`;
-           html += dd;
+            let houseName =`<dt class="housename">${house.name}</dt>`; 
+            let houseMembers=`<dd class="membername">${family}</dd>`;
+            html += houseName;
+            html += houseMembers;
 
             
         });
